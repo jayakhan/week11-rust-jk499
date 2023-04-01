@@ -5,16 +5,19 @@
 [![Clippy](https://github.com/nogibjj/week6-rust-jk499/actions/workflows/lint.yml/badge.svg)](https://github.com/nogibjj/week6-rust-jk499/actions/workflows/lint.yml)
 
 
-# All possible combinations of letters in word - TEST.
+# Simple Calculator (+, -, *, /)
 
 **Developer:** Jaya Khan 
 
 ## Abstract
-The program takes a 4-letter word "TEST" and initializes an empty set to store the combinations. It then uses four nested loops to generate all possible combinations of the letters in the word.
+This program defines a module called calculation which contains four functions for performing basic arithmetic operations: add, subtract, multiply, and divide.
 
-For each combination, the program creates a vector containing the letters in the correct order and inserts it into the set. Finally, the program iterates over the set and prints each combination.
+The main function prompts the user to input two numbers and an operation. It then converts the inputs to f64 floating-point numbers using Rust's parse() method.
 
-The output of the program will be a list of all possible combinations of the letters in the word "TEST", such as "TEST", "TETS", "TSET", "TSTE", "TTSE", "TTES", etc. Note that there are 24 possible combinations in total (4 factorial).
+The program uses a match expression to determine which operation the user wants to perform. If the user inputs +, it calls calculation::add with the two numbers as arguments. If the user inputs -, it calls calculation::subtract, and so on.
+
+The program prints the result of the calculation to the console.
+
 
 ## Requirements
 The code was tested on:
