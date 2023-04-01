@@ -1,23 +1,37 @@
-use std::io;
+use std::collections::HashSet;
 
 fn main() {
-    let mut input = String::new();
+    let word = "TEST";
 
-    println!("Enter a line of text:");
-    io::stdin()
-        .read_line(&mut input)
-        .expect("Failed to read line");
+    let mut combinations = HashSet::new();
 
-    let reversed = reverse_string(input.trim());
+    for i in 0..4 {
+        for j in 0..4 {
+            if j == i {
+                continue;
+            }
+            for k in 0..4 {
+                if k == i || k == j {
+                    continue;
+                }
+                for l in 0..4 {
+                    if l == i || l == j || l == k {
+                        continue;
+                    }
+                    let combination = vec![
+                        word.chars().nth(i).unwrap(),
+                        word.chars().nth(j).unwrap(),
+                        word.chars().nth(k).unwrap(),
+                        word.chars().nth(l).unwrap(),
+                    ];
+                    combinations.insert(combination);
+                }
+            }
+        }
+    }
 
-    println!("Reversed text: {}", reversed);
-}
-
-fn reverse_string(s: &str) -> String {
-    if s.is_empty() {
-        String::new()
-    } else {
-        let (first, rest) = s.split_at(s.len() - 1);
-        format!("{}{}", rest, reverse_string(first))
+    for combination in combinations {
+        let word = combination.iter().collect::<String>();
+        println!("{}", word);
     }
 }

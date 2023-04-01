@@ -5,13 +5,16 @@
 [![Clippy](https://github.com/nogibjj/week6-rust-jk499/actions/workflows/lint.yml/badge.svg)](https://github.com/nogibjj/week6-rust-jk499/actions/workflows/lint.yml)
 
 
-# Reverse String.
+# All possible combinations of letters in word - TEST.
 
 **Developer:** Jaya Khan 
 
 ## Abstract
-This program takes an input text from user and then reverses the string.
+The program takes a 4-letter word "TEST" and initializes an empty set to store the combinations. It then uses four nested loops to generate all possible combinations of the letters in the word.
 
+For each combination, the program creates a vector containing the letters in the correct order and inserts it into the set. Finally, the program iterates over the set and prints each combination.
+
+The output of the program will be a list of all possible combinations of the letters in the word "TEST", such as "TEST", "TETS", "TSET", "TSTE", "TTSE", "TTES", etc. Note that there are 24 possible combinations in total (4 factorial).
 
 ## Requirements
 The code was tested on:
