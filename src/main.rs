@@ -23,10 +23,10 @@ impl<T> LinkedList<T> {
         LinkedList { head: None }
     }
 
-    fn add_to_front(&mut self, data: T) {
-        let new_node = Node::new(data);
-        let prev_node = self.head.take();
-        new_node.next = prev_node;
-        self.head = Some(Box::new(new_node));
+    fn remove_front(&mut self) -> Option<T> {
+        self.head.take().map(|node| {
+            self.head = node.next;
+            node.data
+        })
     }
 }

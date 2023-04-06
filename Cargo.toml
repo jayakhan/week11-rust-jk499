@@ -1,5 +1,5 @@
 [package]
-name = "add_to_front_singly_linkedlist"
+name = "remove_from_front_singly_linkedlist"
 version = "0.1.0"
 edition = "2021"
 authors = ["Jaya <jk499@duke.edu>"]

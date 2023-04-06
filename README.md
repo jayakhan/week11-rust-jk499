@@ -5,14 +5,12 @@
 [![Clippy](https://github.com/nogibjj/week6-rust-jk499/actions/workflows/lint.yml/badge.svg)](https://github.com/nogibjj/week6-rust-jk499/actions/workflows/lint.yml)
 
 
-# Add Node to Front in Singly LinkedList
+# Remove Node from the front of a Singly LinkedList
 
 **Developer:** Jaya Khan 
 
 ## Abstract
-This program adds a node to the front of the singly linked list LinkedList. It does this first by creating a new node with the data passed to the function. It then takes the current head of the list and updates next pointer of the new node to point it to the previous head. Lastly, it makes the head of the list point to the new node. 
-
-
+This program removes a node from the front of the singly linked list. It does this first by taking the current head of the list and then calls map method to update the head of the list to point to the next node.  
 
 ## Requirements
 The code was tested on:
@@ -21,7 +19,7 @@ The code was tested on:
 
 ## Project Structure
                                                                                
-    add-front
+    remove-front
     ├── Cargo.toml
     ├── README.md   
     ├── src
