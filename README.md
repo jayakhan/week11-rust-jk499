@@ -5,18 +5,13 @@
 [![Clippy](https://github.com/nogibjj/week6-rust-jk499/actions/workflows/lint.yml/badge.svg)](https://github.com/nogibjj/week6-rust-jk499/actions/workflows/lint.yml)
 
 
-# Simple Calculator (+, -, *, /)
+# Add Node to Front in Singly LinkedList
 
 **Developer:** Jaya Khan 
 
 ## Abstract
-This program defines a module called calculation which contains four functions for performing basic arithmetic operations: add, subtract, multiply, and divide.
+This program adds a node to the front of the singly linked list LinkedList. It does this first by creating a new node with the data passed to the function. It then takes the current head of the list and updates next pointer of the new node to point it to the previous head. Lastly, it makes the head of the list point to the new node. 
 
-The main function prompts the user to input two numbers and an operation. It then converts the inputs to f64 floating-point numbers using Rust's parse() method.
-
-The program uses a match expression to determine which operation the user wants to perform. If the user inputs +, it calls calculation::add with the two numbers as arguments. If the user inputs -, it calls calculation::subtract, and so on.
-
-The program prints the result of the calculation to the console.
 
 
 ## Requirements
@@ -26,7 +21,7 @@ The code was tested on:
 
 ## Project Structure
                                                                                
-    reverse-text
+    add-front
     ├── Cargo.toml
     ├── README.md   
     ├── src
